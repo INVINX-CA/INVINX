@@ -507,11 +507,52 @@ export default function Home() {
               </div>
 
               <div className="rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-8">
-                <form className="grid gap-5">
-                  <Input label="Name" placeholder="Your name" />
-                  <Input label="Email" placeholder="name@email.com" type="email" />
-                  <Input label="Phone" placeholder="(000) 000-0000" />
-                  <Input label="Company (optional)" placeholder="Business name" />
+                <form
+                  action="https://formspree.io/f/xwvrkenr"
+                  method="POST"
+                  className="grid gap-5"
+                >
+       <div>
+  <label className="mb-2 block text-sm text-white/65">Name</label>
+  <input
+    name="name"
+    type="text"
+    placeholder="Your name"
+    required
+    className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none placeholder:text-white/30 focus:border-[#c8a45a]/40"
+  />
+</div>
+
+<div>
+  <label className="mb-2 block text-sm text-white/65">Email</label>
+  <input
+    name="email"
+    type="email"
+    placeholder="name@email.com"
+    required
+    className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none placeholder:text-white/30 focus:border-[#c8a45a]/40"
+  />
+</div>
+
+<div>
+  <label className="mb-2 block text-sm text-white/65">Phone</label>
+  <input
+    name="phone"
+    type="tel"
+    placeholder="(000) 000-0000"
+    className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none placeholder:text-white/30 focus:border-[#c8a45a]/40"
+  />
+</div>
+
+<div>
+  <label className="mb-2 block text-sm text-white/65">Company (optional)</label>
+  <input
+    name="company"
+    type="text"
+    placeholder="Business name"
+    className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none placeholder:text-white/30 focus:border-[#c8a45a]/40"
+  />
+</div>           
 
                   <div>
                     <label className="mb-2 block text-sm text-white/65">Message</label>
@@ -522,7 +563,7 @@ export default function Home() {
                   </div>
 
                   <button
-                    type="button"
+                    type="submit"
                     className="w-fit rounded-full bg-[#c8a45a] px-6 py-3 font-medium text-black transition hover:opacity-90"
                   >
                     Send Message
